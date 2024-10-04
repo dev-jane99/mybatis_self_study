@@ -19,6 +19,26 @@
 		<servlet-name>write</servlet-name>
 		<url-pattern>/write</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>delete</servlet-name>
+		<servlet-class>com.app.servlet.Delete</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>delete</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>update</servlet-name>
+		<servlet-class>com.app.servlet.Update</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>update</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

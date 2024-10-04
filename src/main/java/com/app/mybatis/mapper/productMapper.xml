@@ -19,9 +19,15 @@
 		WHERE ID = #{id}
 	</select>
 	
-	<select id="deleteThis" resultType="ProductVO">
-		SELECT ID, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_STOCK
-		FROM TBL_PRODUCT
+	<!-- resulttype 이 없음 고로 parameterType이다 -->
+	<update id="update" parameterType="ProductVO">
+		UPDATE TBL_PRODUCT
+		SET PRODUCT_NAME = #{productName}, PRODUCT_PRICE = #{productPrice}, PRODUCT_STOCK = #{productStock}
+		WHERE ID = #{id}
+	</update>
+	
+	<select id="delete" parameterType="Long">
+		DELETE FROM TBL_PRODUCT
 		WHERE ID = #{id}
 	
 	</select>
